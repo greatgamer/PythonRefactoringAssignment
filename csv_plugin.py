@@ -24,7 +24,7 @@ class CSV_handler:
         # self.filename = name
         pass
 
-    def open_file(self, filename='myclass.csv'):
+    def open_csv_file(self, filename='myclass.csv'):
         # Opens csv file and loads each line of the file into list
         # Then load_data_to_module for parsing
         result = []
@@ -33,9 +33,12 @@ class CSV_handler:
                 reader = csv.reader(File)
                 for row in reader:
                     result.append(row)
-            modules = self.load_data_to_module(result)
-            return modules
+            return self.load_data_to_module(result)
         except FileNotFoundError:
+            print('File cannot be found. Please check path and '
+                  'file name or check that file exists')
+            return False
+        except IndexError:
             print('File cannot be found. Please check path and '
                   'file name or check that file exists')
             return False
@@ -44,15 +47,15 @@ class CSV_handler:
                   'information from csv file.')
             return False
 
+
     def load_data_to_module(self, module_list):
-        # This is used to parse list and reconsruct the class structure
-        # current version will only work with a single file. Extenstion
-        # should be easy
-        # Module is loaded into dictionary which can then be used by by
-        # the uml output to generate UML diagram
-
-        # NEED TO DEAL WITH VISIBILITY PROPERTY
-
+        """
+        This is used to parse list and reconsruct the class structure
+        current version will only work with a single file. Extenstion
+        should be easy
+        Module is loaded into dictionary which can then be used by by
+        the uml output to generate UML diagram
+        """
         module_name = ''
         modules = dict()
         newClass = None
