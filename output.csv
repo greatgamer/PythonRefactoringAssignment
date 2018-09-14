@@ -1,9 +1,7 @@
-module,plants
-class,Orchid
-super_classes,<class 'plants.Plant'>
-class,Plant
-attributes,plant_height
-methods,__init__,grow_plant
-class,Sunflower
-methods,drop_seed
-super_classes,<class 'plants.Plant'>
+module,linkedlist
+class,LinkedList
+attributes,headNode
+methods,__init__,add,add_in_order,printList
+class,Node
+attributes,data,nextNode
+methods,__init__,__str__

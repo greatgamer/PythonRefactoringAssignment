@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="078d1bb3-d5bd-4f49-adcf-5ded9b869b47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RefactoringTests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller.py" afterPath="$PROJECT_DIR$/controller.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csv_plugin.py" afterPath="$PROJECT_DIR$/csv_plugin.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/controller.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.coverage" afterPath="$PROJECT_DIR$/.coverage" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.pickle" afterPath="$PROJECT_DIR$/data.pickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlcov/status.dat" afterPath="$PROJECT_DIR$/htmlcov/status.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CurrentAssignment.iml" afterPath="$PROJECT_DIR$/.idea/CurrentAssignment.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RefactoringTests.py" afterPath="$PROJECT_DIR$/RefactoringTests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command_interpreter.py" afterPath="$PROJECT_DIR$/command_interpreter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command_line.py" afterPath="$PROJECT_DIR$/command_line.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help.txt" afterPath="$PROJECT_DIR$/help.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmlcov/index.html" afterPath="$PROJECT_DIR$/htmlcov/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model.py" afterPath="$PROJECT_DIR$/model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.csv" afterPath="$PROJECT_DIR$/output.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/class.dot" afterPath="$PROJECT_DIR$/tmp/class.dot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unit_tests.py" afterPath="$PROJECT_DIR$/unit_tests.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +34,8 @@
       <file leaf-file-name="unit_tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+            <state relative-caret-position="-3884">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -36,8 +46,8 @@
       <file leaf-file-name="RefactoringTests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RefactoringTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="54">
+              <caret line="137" column="12" lean-forward="false" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -45,25 +55,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="209" column="42" lean-forward="false" selection-start-line="209" selection-start-column="42" selection-end-line="209" selection-end-column="42" />
+            <state relative-caret-position="342">
+              <caret line="180" column="0" lean-forward="true" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controller.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="821">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controller.py">
+      <file leaf-file-name="command_interpreter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/command_interpreter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-74">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,10 +105,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/csv_plugin.py" />
-        <option value="$PROJECT_DIR$/RefactoringTests.py" />
         <option value="$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py" />
         <option value="$PROJECT_DIR$/controller.py" />
         <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/unit_tests.py" />
+        <option value="$PROJECT_DIR$/command_line.py" />
+        <option value="$PROJECT_DIR$/RefactoringTests.py" />
+        <option value="$PROJECT_DIR$/command_interpreter.py" />
       </list>
     </option>
   </component>
@@ -113,6 +136,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -127,36 +151,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Python tests.Unittests in RefactoringTests">
-    <configuration default="false" name="Unittests in unit_tests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="CurrentAssignment" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_tests.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Unittests in RefactoringTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -172,6 +173,94 @@
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest MainTests.test_1_interpreter_construct" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CurrentAssignment" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RefactoringTests.py" />
+      <option name="CLASS_NAME" value="MainTests" />
+      <option name="METHOD_NAME" value="test_1_interpreter_construct" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest MainTests.test_2_interpreter_check_command_line" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CurrentAssignment" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RefactoringTests.py" />
+      <option name="CLASS_NAME" value="MainTests" />
+      <option name="METHOD_NAME" value="test_2_interpreter_check_command_line" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest MainTests.test_3_interpreter_check_command_line" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CurrentAssignment" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RefactoringTests.py" />
+      <option name="CLASS_NAME" value="MainTests" />
+      <option name="METHOD_NAME" value="test_3_interpreter_check_command_line" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest MainTests.test_4_interpreter_run_command_to_uml" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CurrentAssignment" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RefactoringTests.py" />
+      <option name="CLASS_NAME" value="MainTests" />
+      <option name="METHOD_NAME" value="test_4_interpreter_run_command_to_uml" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -313,14 +402,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in unit_tests" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in RefactoringTests" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in RefactoringTests" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest MainTests.test_1_interpreter_construct" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest MainTests.test_2_interpreter_check_command_line" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest MainTests.test_3_interpreter_check_command_line" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest MainTests.test_4_interpreter_run_command_to_uml" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in RefactoringTests" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in unit_tests" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest MainTests.test_4_interpreter_run_command_to_uml" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest MainTests.test_3_interpreter_check_command_line" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest MainTests.test_2_interpreter_check_command_line" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest MainTests.test_1_interpreter_construct" />
       </list>
     </recent_temporary>
   </component>
@@ -338,34 +433,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_RefactoringTests - 2018.09.13 at 15h 17m 10s.xml">
+    <history-entry file="Unittest_MainTests_test_4_interpreter_run_command_to_uml - 2018.09.14 at 13h 18m 59s.xml">
+      <configuration name="Unittest MainTests.test_4_interpreter_run_command_to_uml" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_MainTests_test_4_interpreter_run_command_to_uml - 2018.09.14 at 13h 25m 12s.xml">
+      <configuration name="Unittest MainTests.test_4_interpreter_run_command_to_uml" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_MainTests_test_4_interpreter_run_command_to_uml - 2018.09.14 at 13h 25m 35s.xml">
+      <configuration name="Unittest MainTests.test_4_interpreter_run_command_to_uml" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_MainTests_test_4_interpreter_run_command_to_uml - 2018.09.14 at 13h 35m 40s.xml">
+      <configuration name="Unittest MainTests.test_4_interpreter_run_command_to_uml" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_MainTests_test_4_interpreter_run_command_to_uml - 2018.09.14 at 13h 53m 33s.xml">
+      <configuration name="Unittest MainTests.test_4_interpreter_run_command_to_uml" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_MainTests_test_4_interpreter_run_command_to_uml - 2018.09.14 at 13h 54m 05s.xml">
+      <configuration name="Unittest MainTests.test_4_interpreter_run_command_to_uml" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_RefactoringTests - 2018.09.14 at 13h 54m 37s.xml">
       <configuration name="Unittests in RefactoringTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_RefactoringTests - 2018.09.13 at 15h 17m 26s.xml">
+    <history-entry file="Unittests_in_RefactoringTests - 2018.09.14 at 13h 57m 29s.xml">
       <configuration name="Unittests in RefactoringTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_RefactoringTests - 2018.09.13 at 15h 23m 14s.xml">
+    <history-entry file="Unittests_in_RefactoringTests - 2018.09.14 at 14h 21m 21s.xml">
       <configuration name="Unittests in RefactoringTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_RefactoringTests - 2018.09.13 at 15h 24m 30s.xml">
-      <configuration name="Unittests in RefactoringTests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_RefactoringTests - 2018.09.13 at 15h 24m 46s.xml">
-      <configuration name="Unittests in RefactoringTests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_RefactoringTests - 2018.09.13 at 15h 26m 10s.xml">
-      <configuration name="Unittests in RefactoringTests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_RefactoringTests - 2018.09.13 at 15h 27m 06s.xml">
-      <configuration name="Unittests in RefactoringTests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_RefactoringTests - 2018.09.13 at 15h 29m 43s.xml">
-      <configuration name="Unittests in RefactoringTests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_RefactoringTests - 2018.09.13 at 15h 31m 24s.xml">
-      <configuration name="Unittests in RefactoringTests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_RefactoringTests - 2018.09.13 at 15h 32m 08s.xml">
+    <history-entry file="Unittests_in_RefactoringTests - 2018.09.14 at 14h 30m 06s.xml">
       <configuration name="Unittests in RefactoringTests" configurationId="tests" />
     </history-entry>
   </component>
@@ -373,22 +468,22 @@
     <frame x="-1" y="0" width="1368" height="742" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20790629" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04658385" sideWeight="0.30307466" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04658385" sideWeight="0.69692534" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39906833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39906833" sideWeight="0.47657394" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -397,18 +492,51 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RefactoringTests.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/unit_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RefactoringTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3708">
+          <caret line="209" column="42" lean-forward="false" selection-start-line="209" selection-start-column="42" selection-end-line="209" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#14#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/unit_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3114">
@@ -433,9 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="e#166#176#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -454,89 +579,113 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv_plugin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1433">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_code_validator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/command_line.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret line="59" column="31" lean-forward="false" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/unit_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+        <state relative-caret-position="-3884">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/tcunittest.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="261" column="0" lean-forward="false" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3.7/unittest/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="232">
+          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/lib/python3.7/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="614" column="0" lean-forward="false" selection-start-line="614" selection-start-column="0" selection-end-line="614" selection-end-column="0" />
+          <caret line="662" column="0" lean-forward="false" selection-start-line="662" selection-start-column="0" selection-end-line="662" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
+    <entry file="file:///usr/lib/python3.7/unittest/suite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="16" />
+        <state relative-caret-position="119">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv_plugin.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/tcunittest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding>
-            <element signature="e#166#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="209" column="42" lean-forward="false" selection-start-line="209" selection-start-column="42" selection-end-line="209" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="214">
+          <caret line="262" column="0" lean-forward="false" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="54">
+          <caret line="137" column="12" lean-forward="false" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/command_interpreter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="821">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="180" column="0" lean-forward="true" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

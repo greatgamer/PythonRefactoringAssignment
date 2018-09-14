@@ -19,6 +19,7 @@ class CommandLine():
         if self.control.create_class_diagram(files) is True:
             print('UML class diagram successfully '
                   'created for {}'.format(files))
+        return True
 
     def create_csv(self, params):
         infiles = []
@@ -42,9 +43,11 @@ class CommandLine():
         if self.control.load_csv_for_uml(file) is True:
             print("UML class diagram successfully "
                   "created from {}".format(file))
+            return True
         else:
             print("UML class diagram could not be "
                   "created from {}".format(file))
+            return False
 
     def validate_code(self, filenames):
         print("Validating code ...")
@@ -54,15 +57,16 @@ class CommandLine():
         elif type(filenames) == list:
             files = filenames
         valid_files = self.control.validate_code(files)
-        if valid_files is not False:
+        if len(valid_files) > 0:
             print('The following files have been '
                   'validated: {}'.format(valid_files))
             return True
         else:
             print('Unable to validate files: {}'.format(files))
+            return False
 
     def pickle_module(self, filename):
-        if self.control.pickle_modules(filename) is True:
+        if self.control.pickle_modules(filename):
             print('{} successfully pickled'.format(filename))
             return True
         else:
@@ -70,8 +74,10 @@ class CommandLine():
             return False
 
     def pickle_to_uml(self):
-        if self.control.pickle_to_uml() is True:
+        if self.control.pickle_to_uml():
             print('UML successfully created from pickle')
+            return True
         else:
             print('Was unable to create UML from pickle, '
                   'have you pickled anything lately?')
+            return False

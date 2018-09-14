@@ -1,4 +1,4 @@
-usage: command_interpreter [option] [-i input] [-o output]
+usage: command_interpreter <option> [-i input] [-o output]
 Options and arguments:
 [No options]    : Loads interactive shell
 file-uml        : Parses python file and creates UML diagram requires input file

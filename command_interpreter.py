@@ -13,6 +13,7 @@ class Interpreter:
         self.check_command_line(args)
         self.run_command()
 
+
     def check_command_line(self, args):
         '''
         command_line [command] -i [input] -o [output]
@@ -29,25 +30,38 @@ class Interpreter:
             index += 1
 
     def run_command(self):
-        '''
+        """
         Commands:
         help, file-uml, to-csv, csv-uml, pickle, pickle-uml, validate
-        '''
+        """
+
         if self.comm == 'file-uml':
-            self.command.create_class_diagram(self.input_file)
+            return self.command.create_class_diagram(self.input_file)
         elif self.comm == 'to-csv':
             params = self.input_file + ' ' + self.output_file
-            self.command.create_csv(params)
+            return self.command.create_csv(params)
         elif self.comm == 'csv-uml':
-            self.command.load_csv_for_uml(self.input_file)
+            return self.command.load_csv_for_uml(self.input_file)
         elif self.comm == 'pickle':
-            self.command.pickle_module(self.input_file)
+            return self.command.pickle_module(self.input_file)
         elif self.comm == 'pickle-uml':
-            self.command.pickle_to_uml()
+            return self.command.pickle_to_uml()
         elif self.comm == 'validate':
-            self.command.validate_code(self.input_file)
+            return self.command.validate_code(self.input_file)
         elif self.comm == '-help' or self.comm == 'help' or self.comm == '-h':
-            self.help()
+            return self.help()
+        """
+        command_dict = {
+            'file-uml': self.command.create_class_diagram(self.input_file),
+            'to-csv': self.to_csv(),
+            'csv-uml': self.command.load_csv_for_uml(self.input_file),
+            'pickle': self.command.pickle_module(self.input_file),
+            'pickle-uml': self.command.pickle_to_uml(),
+            'validate': self.command.validate_code(self.input_file),
+            'help': self.help()
+        }
+        return command_dict[self.comm]
+       """
 
     def help(self, filename='help.txt'):
         try:
