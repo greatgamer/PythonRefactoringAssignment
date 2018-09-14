@@ -108,6 +108,105 @@ class MainTests(unittest.TestCase):
         actual = cont.pickle_to_uml()
         self.assertEqual(expected, actual)
 
+    def test_1_interpreter_construct(self):
+        interpreter = com_int.Interpreter('-i plants.py -o plants.csv')
+        expected = True
+        if type(interpreter) is com_int.Interpreter:
+            actual = True
+        else:
+            actual = False
+        self.assertEqual(expected, actual)
+
+    def test_2_interpreter_check_command_line(self):
+        args = '-i plants.py -o plants.csv'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        interpreter.check_command_line(args)
+        expected = 'plants.py'
+        actual = interpreter.input_file
+        self.assertEqual(expected, actual)
+
+    def test_3_interpreter_check_command_line(self):
+        args = '-i plants.py -o plants.csv'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        interpreter.check_command_line(args)
+        expected = 'plants.csv'
+        actual = interpreter.output_file
+        self.assertEqual(expected, actual)
+
+    def test_4_interpreter_run_command_to_uml(self):
+        args = 'commandline file-uml -i plants.py -o plants.csv'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        expected = True
+        actual = interpreter.run_command()
+        self.assertEqual(expected, actual)
+
+    def test_5_interpreter_run_command_to_csv(self):
+        args = 'commandline to-csv -i plants.py -o plants.csv'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        expected = True
+        actual = interpreter.run_command()
+        self.assertEqual(expected, actual)
+
+    def test_6_interpreter_run_command_csv_to_uml(self):
+        args = 'commandline csv-uml -i plants.csv'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        expected = True
+        actual = interpreter.run_command()
+        self.assertEqual(expected, actual)
+
+    def test_7_interpreter_run_command_pickle(self):
+        args = 'commandline pickle -i plants.py'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        expected = True
+        actual = interpreter.run_command()
+        self.assertEqual(expected, actual)
+
+    def test_8_interpreter_run_command_pickle_uml(self):
+        args = 'commandline pickle-uml -i plants.py'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        expected = True
+        actual = interpreter.run_command()
+        self.assertEqual(expected, actual)
+
+    def test_9_interpreter_run_command_validate_code(self):
+        args = 'commandline validate -i linkedlist.py'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        expected = True
+        actual = interpreter.run_command()
+        self.assertEqual(expected, actual)
+
+    def test_10_interpreter_run_command_validate_code(self):
+        args = 'commandline validate -i linkedlistnode.py'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        expected = False
+        actual = interpreter.run_command()
+        self.assertEqual(expected, actual)
+
+    def test_11_interpreter_run_command_help(self):
+        args = 'commandline help'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        expected = True
+        actual = interpreter.run_command()
+        self.assertEqual(expected, actual)
+
+    def test_12_interpreter_run_command_help(self):
+        args = 'commandline help'
+        args = args.split(' ')
+        interpreter = com_int.Interpreter(args)
+        expected = False
+        actual = interpreter.help('notrealfile.txt')
+        self.assertEqual(expected, actual)
+
 
 if __name__ == '__main__':
         unittest.main(verbosity=2)

@@ -203,7 +203,6 @@ class FileProcessor:
             visibility = "#"
         return visibility
 
-
     def write_csv_file(self, modules, filename='myclass.csv'):
         """
         Refactored code
