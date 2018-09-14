@@ -134,62 +134,67 @@ class FileProcessor:
         # Process the found class, and store in global modules
         # Find any functions with-in the class
         name = some_class.__name__
-
         module_name = some_class.__module__
 
         # create module for current file in global modules list
         if module_name not in self.modules:
             self.modules[module_name] = list()
 
-        super_classes = []
-        super_classes_names = []
+        self.super_classes = []
+        self.super_classes_names = []
 
         # Only creates class_nodes that have unique name,
         # stops duplicate class_nodes
         # Strips any random objects, only leaves proper class names
         for class_object in some_class.__bases__:
-            if class_object.__name__ != 'object':
-                if class_object.__name__ not in super_classes_names:
-                    super_classes.append(class_object)
-                    super_classes_names.append(class_object.__name__)
+            self.id_class_object(class_object)
 
         # create class node and append to current module
-        class_node = ClassNode(name, super_classes)
-        self.modules[module_name].append(class_node)
+        self.class_node = ClassNode(name, self.super_classes)
+        self.modules[module_name].append(self.class_node)
 
         # create list of functions in class
         for (name, something) in inspect.getmembers(some_class):
-            if inspect.ismethod(something) or inspect.isfunction(something):
-                # get the class from the functions element
-                function_class = something.__qualname__.split('.')[0]
+            self.id_class_functions(some_class, name, something, inspect)
 
-                # only add function if the current class is the same as the
-                # selected functions class
-                if some_class.__name__ == function_class:
-                    # create list of attributes in class with constructor
-                    if something.__name__ == "__init__":
-                        attributes = something.__code__.co_names
+    def id_class_object(self, class_object):
+        if class_object.__name__ != 'object':
+            if class_object.__name__ not in self.super_classes_names:
+                self.super_classes.append(class_object)
+                self.super_classes_names.append(class_object.__name__)
 
-                        for attribute in attributes:
-                            self.process_attribute(attribute, class_node,
-                                                   self.get_visibility_of_string
-                                                   (attribute))
+    def id_class_functions(self, some_class, name, something, inspect):
+        if inspect.ismethod(something) or inspect.isfunction(something):
+            # get the class from the functions element
+            function_class = something.__qualname__.split('.')[0]
 
-                    self.process_function(something, class_node,
-                                          self.get_visibility_of_string
-                                          (something.__name__))
+            # only add function if the current class is the same as the
+            # selected functions class
+            if some_class.__name__ == function_class:
+                # create list of attributes in class with constructor
+                if something.__name__ == "__init__":
+                    attributes = something.__code__.co_names
+                    """
+                    for attribute in attributes:
+                        self.process_attribute(attribute,
+                                               self.get_visibility_of_string
+                                               (attribute))
+                    """
+                self.process_function(something,
+                                      self.get_visibility_of_string
+                                      (something.__name__))
 
-    def process_function(self, some_function, class_node, visibility):
+    def process_function(self, some_function, visibility):
         # Functions are added to the class node with just their title
-        class_node.add_function(some_function.__name__,
+        self.class_node.add_function(some_function.__name__,
                                 inspect.getfullargspec(some_function)[0],
                                 visibility)
 
-    def process_attribute(self, attribute_name, class_node, visibility):
+    def process_attribute(self, attribute_name, visibility):
         # Attributes are added to the class node with just their name
         # filter out __module__, __doc__
         if attribute_name not in self.filter_out_attributes:
-            class_node.add_attribute(attribute_name, visibility)
+            self.class_node.add_attribute(attribute_name, visibility)
 
     def get_modules(self):
         return self.modules

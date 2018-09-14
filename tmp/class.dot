@@ -10,21 +10,8 @@
                             fontname = "Sans Not-Rotated 8"
                             fontsize = 8
                         ]
-                    subgraph {
-Orchid [
-label = "{Orchid||}"
-]
-Plant [
-label = "{Plant||}"
-]
-Sunflower [
-label = "{Sunflower||}"
-]
-}
-
+                    
                     edge [
                         arrowhead = "empty"
                     ]
-                Orchid -> Plant
-Sunflower -> Plant
-}
+                }
