@@ -2,7 +2,5 @@ module,plants
 class,Orchid
 super_classes,<class 'plants.Plant'>
 class,Plant
-methods,__init__,grow_plant
 class,Sunflower
-methods,drop_seed
 super_classes,<class 'plants.Plant'>

@@ -31,12 +31,11 @@ class ClassNode:
         else:
             self.super_classes = super_classes
 
-    def add_attribute(self, attribute_name, visibility):
-        self.attributes.append(AttributeNode(attribute_name, visibility))
+    def add_attribute(self, attribute_name):
+        self.attributes.append(AttributeNode(attribute_name))
 
-    def add_function(self, function_name, list_of_parameters, visibility):
-        self.functions.append(FunctionNode(function_name, list_of_parameters,
-                                           visibility))
+    def add_function(self, function_name, list_of_parameters):
+        self.functions.append(FunctionNode(function_name, list_of_parameters))
 
     def add_super_class(self, super_class):
         self.super_classes.append(super_class)
@@ -53,9 +52,9 @@ class AttributeNode:
     >>> AttributeNode("Attribute One").name
     'Attribute One'
     """
-    def __init__(self, name, visibility):
+    def __init__(self, name):
         self.name = name
-        self.visibility = visibility
+
 
 
 class FunctionNode:
@@ -68,10 +67,9 @@ class FunctionNode:
     >>> len(FunctionNode("Funct One", ["Par One", "Par Two"]).parameters)
     2
     """
-    def __init__(self, name, list_of_parameters, visibility):
+    def __init__(self, name, list_of_parameters):
         self.name = name
         self.parameters = list_of_parameters
-        self.visibility = visibility
 
     def get_name(self):
         return self.name
@@ -174,39 +172,21 @@ class FileProcessor:
                 # create list of attributes in class with constructor
                 if something.__name__ == "__init__":
                     attributes = something.__code__.co_names
-                    """
-                    for attribute in attributes:
-                        self.process_attribute(attribute,
-                                               self.get_visibility_of_string
-                                               (attribute))
-                    """
-                self.process_function(something,
-                                      self.get_visibility_of_string
-                                      (something.__name__))
 
-    def process_function(self, some_function, visibility):
+    def process_function(self, some_function):
         # Functions are added to the class node with just their title
         self.class_node.add_function(some_function.__name__,
-                                inspect.getfullargspec(some_function)[0],
-                                visibility)
+                                inspect.getfullargspec(some_function)[0])
 
-    def process_attribute(self, attribute_name, visibility):
+    def process_attribute(self, attribute_name):
         # Attributes are added to the class node with just their name
         # filter out __module__, __doc__
         if attribute_name not in self.filter_out_attributes:
-            self.class_node.add_attribute(attribute_name, visibility)
+            self.class_node.add_attribute(attribute_name)
 
     def get_modules(self):
         return self.modules
 
-    def get_visibility_of_string(self, string):
-        # get visibility of function (public = +, protected = #, private = -)
-        visibility = "+"
-        if string[:2] == "__":
-            visibility = "-"
-        elif string[0] == "_":
-            visibility = "#"
-        return visibility
 
     def write_csv_file(self, modules, filename='myclass.csv'):
         """
@@ -302,13 +282,13 @@ class FileProcessor:
             elif aline[0] == 'attributes':
                 loop_counter = 1
                 while loop_counter < len(aline):
-                    newClass.add_attribute(aline[loop_counter].strip(), False)
+                    newClass.add_attribute(aline[loop_counter].strip())
                     loop_counter += 1
             elif aline[0] == 'methods':
                 loop_counter = 1
                 while loop_counter < len(aline):
                     newClass.add_function(aline[loop_counter].strip(),
-                                          'params', False)
+                                          'params')
                     loop_counter += 1
             elif aline[0] == 'super_classes':
                 pass
