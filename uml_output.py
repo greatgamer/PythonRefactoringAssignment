@@ -65,14 +65,13 @@ class MakeUML:
                         # Attributes Start
                         if not self.hide_attributes:
                             for attr in c.attributes:
-                                write_row(out, attr.visibility + " " + attr.name)
+                                write_row(out, attr.name)
                         # Attributes End
                         out.write("|")
                         # Functions Start
                         if not self.hide_methods:
                             for func in c.functions:
-                                write_row(out, func.visibility + " " + func.name + "(" + func.get_parameters() +")")
-
+                                write_row(out, func.name + "(" + func.get_parameters() + ")")
                         # Functions End
 
                         out.write("}\"\n")
