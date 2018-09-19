@@ -36,14 +36,14 @@ class Controller:
         if type(in_filename) != list:
             in_filename = [in_filename]
         modules = self.run_parser(in_filename)
-        #csvhandler = csv.CSV_handler()
+        # csvhandler = csv.CSV_handler()
         csvhandler = model.FileProcessor()
         return csvhandler.write_csv_file(modules, out_file)
 
     def load_csv_for_uml(self, input_file='class_data.csv'):
         if os.path.isfile(input_file) is True:
             csvloader = model.FileProcessor()
-            #csvloader = csv.CSV_handler()
+            # csvloader = csv.CSV_handler()
             module = csvloader.open_csv_file(input_file)
             if module is not False:
                 makediagram = UMLout.MakeUML(True, True)

@@ -56,7 +56,6 @@ class AttributeNode:
         self.name = name
 
 
-
 class FunctionNode:
     """
     Function object containing function name and parameters
@@ -176,7 +175,7 @@ class FileProcessor:
     def process_function(self, some_function):
         # Functions are added to the class node with just their title
         self.class_node.add_function(some_function.__name__,
-                                inspect.getfullargspec(some_function)[0])
+                                     inspect.getfullargspec(some_function)[0])
 
     def process_attribute(self, attribute_name):
         # Attributes are added to the class node with just their name
@@ -187,7 +186,6 @@ class FileProcessor:
     def get_modules(self):
         return self.modules
 
-
     def write_csv_file(self, modules, filename='myclass.csv'):
         """
         Refactored code
@@ -195,7 +193,6 @@ class FileProcessor:
         Smell: Feature Envy
         Fix: relocated methods from csv_plugin class to FileProcessor
         """
-
         # Writes module as received from model or from self.open_file
         # to specified csv file.
         output = ''

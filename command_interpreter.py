@@ -13,14 +13,11 @@ class Interpreter:
         self.check_command_line(args)
         self.run_command()
 
-
     def check_command_line(self, args):
-        '''
+        """
         command_line [command] -i [input] -o [output]
-        '''
-        # print(args)
+        """
         self.comm = args[1]
-        # print('command', self.comm)
         index = 0
         for arg in args:
             if arg == '-i':

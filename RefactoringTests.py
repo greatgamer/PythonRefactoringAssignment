@@ -1,16 +1,13 @@
 import unittest
 import model
-import csv_plugin
-import python_code_validator as py_cv
 import pickle_modules as pm
 import controller
 import command_interpreter as com_int
-import command_line as com_line
 
 
 class MainTests(unittest.TestCase):
 
-    def test_1_interpreter_construct(self):
+    def test_01_interpreter_construct(self):
         interpreter = com_int.Interpreter('-i plants.py -o plants.csv')
         expected = True
         if type(interpreter) is com_int.Interpreter:
@@ -19,7 +16,11 @@ class MainTests(unittest.TestCase):
             actual = False
         self.assertEqual(expected, actual)
 
-    def test_2_interpreter_check_command_line(self):
+    """
+    Tests for BADSMELL #!: FEATURE ENVY to check functionality of csv plugin.
+    """
+
+    def test_02_interpreter_check_command_line(self):
         args = '-i plants.py -o plants.csv'
         args = args.split(' ')
         interpreter = com_int.Interpreter(args)
@@ -28,7 +29,7 @@ class MainTests(unittest.TestCase):
         actual = interpreter.input_file
         self.assertEqual(expected, actual)
 
-    def test_3_interpreter_check_command_line(self):
+    def test_03_interpreter_check_command_line(self):
         args = '-i plants.py -o plants.csv'
         args = args.split(' ')
         interpreter = com_int.Interpreter(args)
@@ -37,7 +38,7 @@ class MainTests(unittest.TestCase):
         actual = interpreter.output_file
         self.assertEqual(expected, actual)
 
-    def test_4_interpreter_run_command_to_uml(self):
+    def test_04_interpreter_run_command_to_uml(self):
         args = 'commandline file-uml -i plants.py -o plants.csv'
         args = args.split(' ')
         interpreter = com_int.Interpreter(args)
@@ -45,7 +46,7 @@ class MainTests(unittest.TestCase):
         actual = interpreter.run_command()
         self.assertEqual(expected, actual)
 
-    def test_5_interpreter_run_command_to_csv(self):
+    def test_05_interpreter_run_command_to_csv(self):
         args = 'commandline to-csv -i plants.py -o plants.csv'
         args = args.split(' ')
         interpreter = com_int.Interpreter(args)
@@ -53,7 +54,7 @@ class MainTests(unittest.TestCase):
         actual = interpreter.run_command()
         self.assertEqual(expected, actual)
 
-    def test_6_interpreter_run_command_csv_to_uml(self):
+    def test_06_interpreter_run_command_csv_to_uml(self):
         args = 'commandline csv-uml -i plants.csv'
         args = args.split(' ')
         interpreter = com_int.Interpreter(args)
@@ -61,7 +62,19 @@ class MainTests(unittest.TestCase):
         actual = interpreter.run_command()
         self.assertEqual(expected, actual)
 
-    def test_7_interpreter_run_command_pickle(self):
+    """
+    The following tests were written to fix a IF-ELIF statement
+    The intention had been to replace IF-ELIF in command_interpreter
+    with a dictionary. As command_interpreter runs functions that
+    put output to screen, this option was not suitable for current project.
+    The following tests were written with the intention of refactoring this
+    bad smell.
+    They have been retained as the tests relating to FileProcessor are
+    relevant to other bad smells.
+
+    """
+
+    def test_07_interpreter_run_command_pickle(self):
         args = 'commandline pickle -i plants.py'
         args = args.split(' ')
         interpreter = com_int.Interpreter(args)
@@ -69,7 +82,7 @@ class MainTests(unittest.TestCase):
         actual = interpreter.run_command()
         self.assertEqual(expected, actual)
 
-    def test_8_interpreter_run_command_pickle_uml(self):
+    def test_08_interpreter_run_command_pickle_uml(self):
         args = 'commandline pickle-uml -i plants.py'
         args = args.split(' ')
         interpreter = com_int.Interpreter(args)
@@ -77,7 +90,7 @@ class MainTests(unittest.TestCase):
         actual = interpreter.run_command()
         self.assertEqual(expected, actual)
 
-    def test_9_interpreter_run_command_validate_code(self):
+    def test_09_interpreter_run_command_validate_code(self):
         args = 'commandline validate -i linkedlist.py'
         args = args.split(' ')
         interpreter = com_int.Interpreter(args)
@@ -142,6 +155,15 @@ class MainTests(unittest.TestCase):
             actual = TypeError
         self.assertEqual(expected, actual)
 
+    """
+    Tests for BADSMELL #2: Long method
+    Tests verify FileProcessor core functionality implemented via controller
+    Tests for BADSMELL #3: Speculative Generality
+    Because the get_visibility_of_string() method is linked to functionality
+    of the FileProcessor class, these tests also confirm the effectiveness of
+    refactoring this method.
+    """
+
     def test_15_controller_runparser(self):
         cont = controller.Controller()
         expected = dict
@@ -165,7 +187,9 @@ class MainTests(unittest.TestCase):
         expected = True
         actual = cont.create_class_diagram(['plants.py', 'linkedlist.py'])
         self.assertEqual(expected, actual)
-
+    """
+    Tests to verify effectiveness of csv_plugin
+    """
     def test_20_controller_create_csv(self):
         cont = controller.Controller()
         filename = 'plants.py'
@@ -196,23 +220,12 @@ class MainTests(unittest.TestCase):
         actual = cont.load_csv_for_uml('linkedlist.csv')
         self.assertEqual(expected, actual)
 
-    def test_24_controller_validate_code(self):
-        cont = controller.Controller()
-        expected = 1
-        actual = len(cont.validate_code(['plants.py']))
-        self.assertEqual(expected, actual)
-
-    def test_25_controller_validate_code(self):
-        cont = controller.Controller()
-        expected = 2
-        actual = len(cont.validate_code(['plants.py', 'plants.py']))
-        self.assertEqual(expected, actual)
-
-    def test_26_controller_validate_code(self):
-        cont = controller.Controller()
-        expected = 1
-        actual = len(cont.validate_code(['linkedlist.py', 'plants.foo']))
-        self.assertEqual(expected, actual)
+    """
+    Tests for BADSMELL #2 and #3
+    These tests for verify functionality of the module generated by
+    FileProcessor. If any problems are generated by Badsmells #2
+    and #3 these tests will fail.
+    """
 
     def test_27_controller_pickle(self):
         cont = controller.Controller()
@@ -234,11 +247,10 @@ class MainTests(unittest.TestCase):
         actual = cont.pickle_modules('linkedlist.csv')
         self.assertEqual(expected, actual)
 
-    def test_30_controller_load_pickle(self):
-        cont = controller.Controller()
-        expected = dict
-        actual = type(cont.load_pickle())
-        self.assertEqual(expected, actual)
+    """
+    These tests verify overall functionality of the programme
+    have been retained
+    """
 
     def test_31_controller_module_to_uml(self):
         processor = model.FileProcessor()
